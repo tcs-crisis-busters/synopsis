@@ -1,0 +1,202 @@
+[
+  {
+    "branchName": "AIROLI",
+    "branchCode": 1564,
+    "bankName": "AXIS BANK",
+    "ifscCode": "UTIB0001564",
+    "city": "MUMBAI",
+    "sumCex": 103000,
+    "sumAde": 29000,
+    "total": 132000
+  },
+  {
+    "branchName": "ACHHAD",
+    "branchCode": 96,
+    "bankName": "BANK OF INDIA",
+    "ifscCode": "BKID0000096",
+    "city": "MUMBAI",
+    "sumCex": 13500,
+    "sumAde": 20000,
+    "total": 33500
+  },
+  {
+    "branchName": "T NAGAR",
+    "branchCode": 206,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0000206        ",
+    "city": "CHENNAI",
+    "sumCex": 60500,
+    "sumAde": 83500,
+    "total": 144000
+  },
+  {
+    "branchName": "GANDHI NAGAR",
+    "branchCode": 3003,
+    "bankName": "AXIS BANK",
+    "ifscCode": "UTIB0003003",
+    "city": "CHENNAI",
+    "sumCex": 54000,
+    "sumAde": 657000,
+    "total": 711000
+  },
+  {
+    "branchName": "ADITYA BIRLA CENTER",
+    "branchCode": 580,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0000580",
+    "city": "MUMBAI",
+    "sumCex": 59500,
+    "sumAde": 37500,
+    "total": 97000
+  },
+  {
+    "branchName": "ANDHERI",
+    "branchCode": 2,
+    "bankName": "BANK OF INDIA",
+    "ifscCode": "BKID0000002",
+    "city": "MUMBAI",
+    "sumCex": 56500,
+    "sumAde": 25500,
+    "total": 82000
+  },
+  {
+    "branchName": "ADYAR",
+    "branchCode": 1115,
+    "bankName": "STATE BANK OF INDIA",
+    "ifscCode": "SBIN0001115",
+    "city": "CHENNAI",
+    "sumCex": 21000,
+    "sumAde": 76000,
+    "total": 97000
+  },
+  {
+    "branchName": "EGMORE",
+    "branchCode": 8009,
+    "bankName": "BANK OF INDIA",
+    "ifscCode": "BKID0008009",
+    "city": "CHENNAI",
+    "sumCex": 65000,
+    "sumAde": 1078500,
+    "total": 1143500
+  },
+  {
+    "branchName": "GUINDY",
+    "branchCode": 8011,
+    "bankName": "BANK OF INDIA",
+    "ifscCode": "BKID0008011",
+    "city": "CHENNAI",
+    "sumCex": 26500,
+    "sumAde": 113500,
+    "total": 140000
+  },
+  {
+    "branchName": "PORUR",
+    "branchCode": 1766,
+    "bankName": "AXIS BANK",
+    "ifscCode": "UTIB0001766",
+    "city": "CHENNAI",
+    "sumCex": 22500,
+    "sumAde": 500000,
+    "total": 522500
+  },
+  {
+    "branchName": "CHEMBUR NAKA",
+    "branchCode": 1208,
+    "bankName": "ICICI BANK LTD",
+    "ifscCode": "ICIC0001208",
+    "city": "MUMBAI",
+    "sumCex": 46000,
+    "sumAde": 35000,
+    "total": 81000
+  },
+  {
+    "branchName": "GHATKOPAR",
+    "branchCode": 406,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0000406",
+    "city": "MUMBAI",
+    "sumCex": 121000,
+    "sumAde": 287000,
+    "total": 408000
+  },
+  {
+    "branchName": "CBD BELAPUR",
+    "branchCode": 4346,
+    "bankName": "STATE BANK OF INDIA",
+    "ifscCode": "SBIN0004346",
+    "city": "MUMBAI",
+    "sumCex": 46500,
+    "sumAde": 26000,
+    "total": 72500
+  },
+  {
+    "branchName": "K K NAGAR",
+    "branchCode": 1052,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0001052",
+    "city": "CHENNAI",
+    "sumCex": 14000,
+    "sumAde": 51500,
+    "total": 65500
+  },
+  {
+    "branchName": "ANNA NAGAR",
+    "branchCode": 6027,
+    "bankName": "ICICI BANK LTD",
+    "ifscCode": "ICIC0006027",
+    "city": "CHENNAI",
+    "sumCex": 29000,
+    "sumAde": 113500,
+    "total": 142500
+  },
+  {
+    "branchName": "BHAT BAZZAAR",
+    "branchCode": 1223,
+    "bankName": "ICICI BANK LTD",
+    "ifscCode": "ICIC0001223",
+    "city": "MUMBAI",
+    "sumCex": 18500,
+    "sumAde": 236000,
+    "total": 254500
+  },
+  {
+    "branchName": "ASHOK NAGAR",
+    "branchCode": 77,
+    "bankName": "ICICI BANK LTD",
+    "ifscCode": "ICIC0000077",
+    "city": "CHENNAI",
+    "sumCex": 6000,
+    "sumAde": 70500,
+    "total": 76500
+  },
+  {
+    "branchName": "CARMAICHAEL",
+    "branchCode": 5342,
+    "bankName": "STATE BANK OF INDIA",
+    "ifscCode": "SBIN0005342",
+    "city": "MUMBAI",
+    "sumCex": 3000,
+    "sumAde": 57000,
+    "total": 60000
+  },
+  {
+    "branchName": "MYLAPORE",
+    "branchCode": 965,
+    "bankName": "STATE BANK OF INDIA",
+    "ifscCode": "SBIN0000965",
+    "city": "CHENNAI",
+    "sumCex": 5000,
+    "sumAde": 64000,
+    "total": 69000
+  },
+  {
+    "branchName": "BHULESHWAR",
+    "branchCode": 2622,
+    "bankName": "AXIS BANK",
+    "ifscCode": "UTIB0002622",
+    "city": "MUMBAI",
+    "sumCex": 2000,
+    "sumAde": 32000,
+    "total": 34000
+  }
+]

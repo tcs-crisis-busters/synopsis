@@ -1,0 +1,27 @@
+[
+{
+"key": "Individual count",
+"values": [
+    {
+        "label" : "Bangalore" ,
+        "value" : 894867
+    } ,
+    {
+        "label" : "Chennai" ,
+        "value" : 796780
+    } ,
+    {
+        "label" : "Delhi" ,
+        "value" : 997864
+    } ,
+    {
+        "label" : "Mumbai" ,
+        "value" : 890675
+    } ,
+    {
+        "label" : "Pune" ,
+        "value" : 689034
+    }
+]
+}
+]

@@ -1,0 +1,182 @@
+          <!-- grid template begins -->
+          <div layout-fill>
+            <md-content layout-padding layout="row" layout-align="start">
+                <div flex-gt-md="60" flex-md="80" flex-xs="100">
+                    <div layout-gt-xs="row" layout-xs="column" layout-align="stretch center">
+                        <div  layout="row" layout-align="censpace-between endter start">
+                           <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs">
+                              <input ng-model="aadhaarId" class="md-input"
+                                       ng-change="peopleGridActions.filter()"
+                                       id="aadhaar"
+                                       placeholder="Aadhaar #"
+                                       filter-by="aadhaarId"
+                                       filter-type="text"
+                                       grid-id="people"
+                                       aria-invalid="false" >
+                            </md-input-container>
+                            <input type="checkbox" ng-model="advFilters"><sub>Advance Filters</sub>
+                             <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
+                                <input ng-model="name" class="md-input"
+                                         ng-change="peopleGridActions.filter()"
+                                         id="name"
+                                         placeholder="Name"
+                                         filter-by="name"
+                                         filter-type="text"
+                                         grid-id="people"
+                                         aria-invalid="false" >
+                              </md-input-container>
+                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
+                                <input ng-model="panId" class="md-input"
+                                         ng-change="peopleGridActions.filter()"
+                                         id="panId"
+                                         placeholder="PAN #"
+                                         filter-by="panId"
+                                         filter-type="text"
+                                         grid-id="people"
+                                         aria-invalid="false" >
+                              </md-input-container>
+                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
+                                <input ng-model="city" class="md-input"
+                                         ng-change="peopleGridActions.filter()"
+                                         id="city"
+                                         placeholder="City"
+                                         filter-by="city"
+                                         filter-type="text"
+                                         grid-id="people"
+                                         aria-invalid="false" >
+                              </md-input-container>
+                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
+                                <input ng-model="avgItrIncome" class="md-input"
+                                         ng-change="peopleGridActions.filter()"
+                                         id="avgItrIncome"
+                                         placeholder="ITR Income"
+                                         filter-by="avgItrIncome"
+                                         filter-type="text"
+                                         grid-id="people"
+                                         aria-invalid="false" >
+                              </md-input-container>
+                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
+                                <input ng-model="sumCex" class="md-input"
+                                         ng-change="peopleGridActions.filter()"
+                                         id="sumCex"
+                                         placeholder="CEX"
+                                         filter-by="sumCex"
+                                         filter-type="text"
+                                         grid-id="people"
+                                         aria-invalid="false" >
+                              </md-input-container>
+                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
+                                <input ng-model="sumAde" class="md-input"
+                                         ng-change="peopleGridActions.filter()"
+                                         id="sumAde"
+                                         placeholder="ADE"
+                                         filter-by="sumAde"
+                                         filter-type="text"
+                                         grid-id="people"
+                                         aria-invalid="false" >
+                              </md-input-container>
+                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
+                                <input ng-model="total" class="md-input"
+                                         ng-change="peopleGridActions.filter()"
+                                         id="total"
+                                         placeholder="total"
+                                         filter-by="total"
+                                         filter-type="text"
+                                         grid-id="people"
+                                         aria-invalid="false" >
+                              </md-input-container>
+                        </div>
+                    </div>
+                    <div grid-data id='people' grid-options="peopleGridOptions" grid-actions="peopleGridActions">
+                        <div layout-gt-sm="row" layout-sm="column" layout-align="center">
+                            <div flex-gt-sm="25" flex-sm="100" layout="row" layout-align="start center">
+                                <span>{{filtered.length}} items total</span>
+                            </div>
+                            <div flex-gt-sm="75" flex-xs="100">
+                                <div layout-xs="column" layout="row" layout-align-xs="end end" layout-align="end center">
+                                    <grid-pagination max-size="5"
+                                                     boundary-links="true"
+                                                     class="pagination mdl-shadow--2dp"
+                                                     ng-if="paginationOptions.totalItems  > paginationOptions.itemsPerPage"
+                                                     total-items="paginationOptions.totalItems"
+                                                     ng-model="paginationOptions.currentPage"
+                                                     ng-change="reloadGrid()"
+                                                     items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
+                                    <md-input-container flex-offset-gt-xs="5" class="items-per-page">
+                                        <md-select ng-init="paginationOptions.itemsPerPage = '10'" ng-model="paginationOptions.itemsPerPage" ng-change="reloadGrid()">
+                                            <md-option>10</md-option>
+                                            <md-option>25</md-option>
+                                            <md-option>50</md-option>
+                                            <md-option>75</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                            </div>
+                        </div>
+                         <div>
+                            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" >
+                                <thead>
+                                <tr>
+                                    <th sortable="aadhaarId" class="sortable">
+                                        <span>Aadhaar #</span>
+                                    </th>
+                                    <th sortable="name" class="sortable">
+                                        <span>Name</span>
+                                    </th>
+                                    <th sortable="panId" class="sortable">
+                                        <span>PAN #</span>
+                                    </th>
+                                    <th sortable="city" class="sortable">
+                                        <span>City</span>
+                                    </th>
+                                    <th sortable="avgItrIncome" class="sortable">
+                                        <span>Average ITR Income</span>
+                                    </th>
+                                    <th sortable="sumCex" class="sortable">
+                                        <span>Total Currency Exchanged</span>
+                                    </th>
+                                    <th sortable="sumAde" class="sortable">
+                                        <span>Total Currency Deposited</span>
+                                    </th>
+                                    <th sortable="total" class="sortable">
+                                        <span>Total Amount</span>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-class="item.total > 250000 ? 'amber' : 'normal'" grid-item>
+                                    <td ng-bind="item.aadhaarId">/td>
+                                    <td ng-bind="item.name"></td>
+                                    <td ng-bind="item.panId"></td>
+                                    <td ng-bind="item.city"></td>
+                                    <td ng-bind="item.avgItrIncome"></td>
+                                    <td ng-bind="item.sumCex"></td>
+                                    <td ng-bind="item.sumAde"></td>
+                                    <td ng-bind="item.total"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div layout-xs="column" layout="row" layout-align-xs="end end" layout-align="end center">
+                            <grid-pagination max-size="5"
+                                             boundary-links="true"
+                                             class="pagination"
+                                             ng-if="paginationOptions.totalItems  > paginationOptions.itemsPerPage"
+                                             total-items="paginationOptions.totalItems"
+                                             ng-model="paginationOptions.currentPage"
+                                             ng-change="reloadGrid()"
+                                             items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
+                            <md-input-container flex-offset-gt-xs="5" class="items-per-page">
+                                <md-select ng-init="paginationOptions.itemsPerPage = '10'" ng-model="paginationOptions.itemsPerPage" ng-change="reloadGrid()">
+                                    <md-option>10</md-option>
+                                    <md-option>25</md-option>
+                                    <md-option>50</md-option>
+                                    <md-option>75</md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                    </div>
+                </div>
+            </md-content>
+        </div>
+        <!-- grid template ends -->

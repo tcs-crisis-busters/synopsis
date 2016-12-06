@@ -1,0 +1,13 @@
+{
+	"name": "synopsis",
+	"version": "1.0.0",
+	"author": "tcs.crisis.busters",
+	"description": "Synopsis about Demonitization",
+	"dependencies": {
+		"connect": "^2.0.0",
+		"serve-static": "^1.5.0"
+	},
+	"scripts": {
+		"start": "node server.js"
+	}
+}

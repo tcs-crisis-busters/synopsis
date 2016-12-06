@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="angular-material@*" data-semver="1.1.0" rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css" />
+    <!-- grid font begins -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- grid font ends -->
+    <!-- grid css begins-->
+    <link rel="stylesheet" href="./css/material.min.css">
+    <link rel="stylesheet" href="./css/dr-grid.css">
+    <!-- grid css ends-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Chart supporting files begins here-->
+    <link rel="stylesheet" href="./css/nv.d3.min.css">
+    <!-- Chart supporting files ends here-->
+  </head>
+  <body ng-app="drApp" ng-controller="drAppController  as dr" >
+    <div ng-cloak>
+    <!-- header begins -->
+      <div layout="row" layout-align="center center">
+        <md-toolbar md-scroll-shrink>
+          <div class="md-toolbar-tools">Demonetisation Reports Pack &nbsp; <sup>Powered by Crisis Busters</sup></div>
+        </md-toolbar>
+      </div>
+    <!-- header ends -->
+    <!-- Progress code begins -->
+        <md-progress-linear md-mode="indeterminate" ng-hide="isLoaded"></md-progress-linear>
+    <!-- Progress code ends -->
+      <md-content ng-show="isLoaded">
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Individual List" >
+        <md-content class="md-padding" ng-include src="'./view/people-tmpl.html'">
+        <!-- grid template begins -->
+        <!-- grid template ends -->
+        </md-content>
+      </md-tab>
+      <md-tab label="Bank List">
+        <md-content class="md-padding" ng-include src="'./view/banks-tmpl.html'">
+          <!-- grid template begins -->
+          <!-- grid template ends-->
+        </md-content>
+      </md-tab>
+      <md-tab label="Nomographs" md-on-select="onTabChange(['refreshDiscreteGraph', 'refreshScatteredGraph'])" >
+        <md-content class="md-padding">
+          <!-- graphs begins-->
+          <div ng-app="drAppTrends" ng-controller="drCtrlTrends" ng-cloak>
+            <md-content>
+              <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab  label="Individuals trend" md-on-select="onTabChange(['refreshDiscreteGraph', 'refreshScatteredGraph'])">
+                  <md-tab-body class="">
+                    <!-- Citizens trends begins -->
+                     <div ng-controller="drCtrlTrendsContainer">
+                       <md-content class="md-padding" layout-xs="column" layout="row">
+                          <div flex-xs="" flex-gt-xs="50" layout="column">
+                            <md-card>
+                              <!-- discrete chart begins -->
+                                <div ng-app="drDiscreteGraph" ng-controller="drCtrlBarChart">
+                                 <nvd3 options="options" data="data" api="api"></nvd3>
+                                </div>
+                              <!-- discrete chart end -->
+                              <md-card-content>
+                               <p>Individuals who exchanged/deposited currency > 250K accross major cities &nbsp;&nbsp;&nbsp;&nbsp;</p>
+                              </md-card-content>
+                            </md-card>
+                          </div>
+                          <div flex-xs="" flex-gt-xs="50" layout="column">
+                            <md-card>
+                              <!-- scattered chart begins -->
+                              <div ng-app="drScartedGraph" ng-controller="drCtrlScartedChart">
+                                 <nvd3 options="options" data="data" api="api"></nvd3>
+                                </div>
+                              <!-- scattered chart end -->
+                              <md-card-content>
+                                <p>Individuals who exchanged/deposited currency > 50K and who had been not filed the ITR for past three years across major cities</p>
+                              </md-card-content>
+                            </md-card>
+                          </div>
+                       </md-content>
+                      </div>
+                    <!-- Citizens trends ends-->
+                  </md-tab-body>
+                </md-tab>
+                <md-tab label="Banks Trend" onTabChange(['refreshPieGraph']>
+                  <md-content class="md-padding">
+                    <div flex-xs="" flex-gt-xs="50" layout="row">
+                      <md-card>
+                        <!-- pie chart begins -->
+                        <div ng-app="drPieGraph" ng-controller="drCtrlPieChart">
+                           <nvd3 options="options" data="data" api="api"></nvd3>
+                          </div>
+                        <!-- pie chart end -->
+                        <md-card-content>
+                          <p>Currency exchanged/deposited volume in major banks</p>
+                        </md-card-content>
+                      </md-card>
+                    </div>
+                  </md-content>
+                </md-tab>
+              </md-tabs>
+            </md-content>
+          </div>
+          <!-- graphs ends-->
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+  </div>
+  <!--com ctrls -->
+  <input type="text" id="selectedCity" style="visibility: hidden;">
+  <input type="text" id="progressCount" style="visibility: hidden;">
+  <!--com ctrls -->
+  <!-- Dialog code begins temporarily hold this below code -->
+    <!--div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="center">
+      <div class="dialog-demo-content" layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+          Custom Dialog
+        </md-button>
+      </div>
+    </div-->
+  <!-- Dialog code ends -->
+  <!-- Angular material begins -->
+    <script data-require="angularjs@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular.js"></script>
+    <script data-require="angular-animate@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular-animate.js"></script>
+    <script data-require="angular-aria@1.5.5" data-semver="1.5.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script data-require="angular-messages@1.5.5" data-semver="1.5.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script data-require="angular-material@*" data-semver="1.1.0" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/data.grid.js"></script>
+    <script src="./js/dr-tab.js"></script>
+    <script src="./js/dr-all.js"></script>
+    <script src="./js/dr-dialog-grid.js"></script>
+  <!-- Angular material end -->
+  <!-- Angular D3 chart begins -->
+    <script src="./js/d3.min.js" charset="utf-8"></script>
+    <script src="./js/nv.d3.min.js"></script>
+    <script src="./js/angular-nvd3.min.js"></script>
+    <script src="./js/dr-dbar-chart.js"></script>
+    <script src="./js/dr-scarted-chart.js"></script>
+    <script src="./js/dr-pie-chart.js"></script>
+  <!-- Angular D3 chart ends -->
+  </body>
+</html>

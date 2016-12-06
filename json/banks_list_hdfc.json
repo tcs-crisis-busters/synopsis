@@ -1,0 +1,37 @@
+[{
+    "branchName": "GHATKOPAR",
+    "branchCode": 406,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0000406",
+    "city": "MUMBAI",
+    "sumCex": 121000,
+    "sumAde": 287000,
+    "total": 408000
+}, {
+    "branchName": "ADITYA BIRLA CENTER",
+    "branchCode": 580,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0000580",
+    "city": "MUMBAI",
+    "sumCex": 59500,
+    "sumAde": 37500,
+    "total": 97000
+}, {
+    "branchName": "T NAGAR",
+    "branchCode": 206,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0000206        ",
+    "city": "CHENNAI",
+    "sumCex": 60500,
+    "sumAde": 83500,
+    "total": 144000
+}, {
+    "branchName": "K K NAGAR",
+    "branchCode": 1052,
+    "bankName": "HDFC BANK LTD",
+    "ifscCode": "HDFC0001052",
+    "city": "CHENNAI",
+    "sumCex": 14000,
+    "sumAde": 51500,
+    "total": 65500
+}]

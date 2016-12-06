@@ -1,0 +1,54 @@
+{
+              "curYear": 2016,
+              "cities": ["Bangalore", "Chennai", "Delhi", "Mumbai", "Pune"],
+              "Bangalore":[{
+                              "individualCount": 853789,
+                              "lastItrFiled": 3
+                          },{
+                              "individualCount": 739034,
+                              "lastItrFiled": 2
+                          },{
+                              "individualCount": 637101,
+                              "lastItrFiled": 1
+                          }],
+              "Chennai":[{
+                              "individualCount": 893346,
+                              "lastItrFiled": 3
+                          },{
+                              "individualCount": 887902,
+                              "lastItrFiled": 2
+                          },{
+                              "individualCount": 828566,
+                              "lastItrFiled": 1
+              }],
+              "Delhi":[{
+                              "individualCount": 981775,
+                              "lastItrFiled": 3
+                          },{
+                              "individualCount": 943806,
+                              "lastItrFiled": 2
+                          },{
+                              "individualCount": 934590,
+                              "lastItrFiled": 1
+              }],
+              "Mumbai":[{
+                              "individualCount": 940287,
+                              "lastItrFiled": 3
+                          },{
+                              "individualCount": 928905,
+                              "lastItrFiled": 2
+                          },{
+                              "individualCount": 874578,
+                              "lastItrFiled": 1
+                }],
+              "Pune":[{
+                              "individualCount": 354768,
+                              "lastItrFiled": 3
+                          },{
+                              "individualCount": 371622,
+                              "lastItrFiled": 2
+                          },{
+                              "individualCount": 356217,
+                              "lastItrFiled": 1
+              }]
+            }
