@@ -185,8 +185,8 @@ angular.module('drApp', ['dataGrid', 'pagination', 'ngMaterial', 'drAppTrends', 
                 var endPoint = 'https://sloopapi.mybluemix.net/api/people/barChart';
                 return $http({
                     method: 'GET',
-                    url: endPoint
-                    //url: './people_bar_chart.json' //static
+                    //url: endPoint
+                    url: './json/people_bar_chart.json' //static
                 });
             },
             getPeopleScatteredChart: function () {
@@ -194,8 +194,8 @@ angular.module('drApp', ['dataGrid', 'pagination', 'ngMaterial', 'drAppTrends', 
                 var endPoint = 'https://sloopapi.mybluemix.net/api/people/scatteredChart';
                 return $http({
                     method: 'GET',
-                    url: endPoint
-                    //url: './people_scattered_chart.json' //static
+                    //url: endPoint
+                    url: './json/people_scattered_chart.json' //static
                 });
             },
             getBanksData: function(){
@@ -220,8 +220,8 @@ angular.module('drApp', ['dataGrid', 'pagination', 'ngMaterial', 'drAppTrends', 
                 var endPoint = 'https://sloopapi.mybluemix.net/api/banks/pieChart';
                 return $http({
                     method: 'GET',
-                    url: endPoint
-                    //url: './banks_pie_chart.json' //static
+                    //url: endPoint
+                    url: './json/banks_pie_chart.json' //static
                 });
             }
       }
