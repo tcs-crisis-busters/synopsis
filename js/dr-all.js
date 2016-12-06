@@ -124,7 +124,7 @@ angular.module('drApp', ['dataGrid', 'pagination', 'ngMaterial', 'drAppTrends', 
         
         $scope.$on("banksFilterByCity", function(e, resp){
           $rootScope.isLoaded = false;
-          document.getElementById('selectedCity').value = resp.data.label; 
+          document.getElementById('selectedCity').value = resp.data.key; 
           $scope.showCityGrid('branchesByBank', resp);
         });
         
@@ -208,7 +208,7 @@ angular.module('drApp', ['dataGrid', 'pagination', 'ngMaterial', 'drAppTrends', 
             },
             getBanksDataByCity: function (city) {
                 //var endPoint = 'http://0.0.0.0:3000/api/banks/grid?city=' + city; // localhost
-                var endPoint = 'https://sloopapi.mybluemix.net/api/banks/grid?city=' + city;
+                var endPoint = 'https://sloopapi.mybluemix.net/api/banks/grid?bankName=' + city;
                 return $http({
                     method: 'GET',
                     url: endPoint
