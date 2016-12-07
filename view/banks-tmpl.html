@@ -13,8 +13,11 @@
                                        filter-type="text"
                                        grid-id="banks"
                                        aria-invalid="false" >
+                                       <br/>
+                                       <md-switch ng-model="badvFilters" aria-label="Advanced Filters">
+                                         Advanced filters
+                                      </md-switch>
                             </md-input-container>
-                            <input type="checkbox" ng-model="badvFilters"><sub>Advance Filters</sub>
                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="badvFilters">
                                 <input ng-model="branchCode" class="md-input"
                                          ng-change="banksGridActions.filter()"

@@ -9,7 +9,7 @@ angular.module('drDiscreteGraph', ['nvd3'])
                     top: 30,
                     right: 0,
                     bottom: 100,
-                    left: 115
+                    left: 85
                 },
                 x: function(d){return d.label;},
                 y: function(d){return d.value;},

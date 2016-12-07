@@ -27,8 +27,11 @@
                                        filter-type="text"
                                        grid-id="fpeople"
                                        aria-invalid="false" >
+                                       <br/>
+                                       <md-switch ng-model="advFilters" aria-label="Advanced Filters">
+                                         Advanced filters
+                                      </md-switch>
                             </md-input-container>
-                            <input type="checkbox" ng-model="advFilters"><sub>Advance Filters</sub>
                              <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs" ng-show="advFilters">
                                 <input ng-model="fname" class="md-input"
                                          ng-change="fPeopleGridActions.filter()"

@@ -20,7 +20,7 @@
     <!-- header begins -->
       <div layout="row" layout-align="center center">
         <md-toolbar md-scroll-shrink>
-          <div class="md-toolbar-tools">Demonetisation Reports Pack &nbsp; <sup>Powered by Crisis Busters</sup></div>
+          <div class="md-toolbar-tools">Demonetisation Synopsis Pack &nbsp; <sup>Powered by Crisis Busters</sup></div>
         </md-toolbar>
       </div>
     <!-- header ends -->
@@ -51,8 +51,8 @@
                   <md-tab-body class="">
                     <!-- Citizens trends begins -->
                      <div ng-controller="drCtrlTrendsContainer">
-                       <md-content class="md-padding" layout-xs="column" layout="row">
-                          <div flex-xs="" flex-gt-xs="50" layout="column">
+                       <md-content class="md-padding" layout="row">
+                          <div flex-xs="" layout="column">
                             <md-card>
                               <!-- discrete chart begins -->
                                 <div ng-app="drDiscreteGraph" ng-controller="drCtrlBarChart">
@@ -64,7 +64,7 @@
                               </md-card-content>
                             </md-card>
                           </div>
-                          <div flex-xs="" flex-gt-xs="50" layout="column">
+                          <div flex-xs=""  layout="column">
                             <md-card>
                               <!-- scattered chart begins -->
                               <div ng-app="drScartedGraph" ng-controller="drCtrlScartedChart">
@@ -83,7 +83,7 @@
                 </md-tab>
                 <md-tab label="Banks Trend" onTabChange(['refreshPieGraph']>
                   <md-content class="md-padding">
-                    <div flex-xs="" flex-gt-xs="50" layout="row">
+                    <div flex-xs="" layout="row">
                       <md-card>
                         <!-- pie chart begins -->
                         <div ng-app="drPieGraph" ng-controller="drCtrlPieChart">
@@ -111,15 +111,6 @@
   <input type="text" id="selectedBank" style="visibility: hidden;">
   <input type="text" id="progressCount" style="visibility: hidden;">
   <!--com ctrls -->
-  <!-- Dialog code begins temporarily hold this below code -->
-    <!--div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="center">
-      <div class="dialog-demo-content" layout="row" layout-wrap="" layout-margin="" layout-align="center">
-        <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
-          Custom Dialog
-        </md-button>
-      </div>
-    </div-->
-  <!-- Dialog code ends -->
   <!-- Angular material begins -->
     <script data-require="angularjs@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular.js"></script>
     <script data-require="angular-animate@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular-animate.js"></script>

@@ -1,42 +1,3 @@
-/* tab style begins */
-.tabsdemoDynamicHeight md-content {
-  background-color: transparent !important; }
-  .tabsdemoDynamicHeight md-content md-tabs {
-    background: #f6f6f6;
-    border: 1px solid #e1e1e1; }
-    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
-      background: white; }
-  .tabsdemoDynamicHeight md-content h1:first-child {
-    margin-top: 0; }
-/* tab css end */
-
-/* white-grid frame style begins */
-.gridListdemoBasicUsage md-grid-list {
-  margin: 8px; }
-
-.gridListdemoBasicUsage .gray {
-  background: #f5f5f5; }
-
-.gridListdemoBasicUsage .green {
-  background: #b9f6ca; }
-
-.gridListdemoBasicUsage .yellow {
-  background: #ffff8d; }
-
-.gridListdemoBasicUsage .blue {
-  background: #84ffff; }
-
-.gridListdemoBasicUsage .purple {
-  background: #b388ff; }
-
-.gridListdemoBasicUsage .red {
-  background: #ff8a80; }
-
-.gridListdemoBasicUsage md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
-
-/* white-grid frame style end */
-
 /* grid - styles customized */
 .amber {
     background: rgb(255,255,153); 
@@ -47,101 +8,73 @@ sup {
   font-size: 10px;
 }
 
-/* grid */
-
-.mdl-data-table th {
-  background-color: rgb(207,216,220) !important;
+md-input-container {
+  margin: 2px !important;
 }
+
+/*Device Optimization*/
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width:767px) {
+  body {font-size: 2px;}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width:768px) {
+  body {font-size: 10px;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width:992px) {
+  body {font-size: 14px;}
+	/* grid */
+
+  .mdl-data-table th {
+    background-color: rgb(207,216,220) !important;
+    font-size: 14px !important;
+  }
+      /*Graphs cards */
+
+  md-card-content p {
+   font-size: 11px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width:1200px) {
+  body {font-size: 15px;}
+	/* grid */
+  .mdl-data-table th {
+    background-color: rgb(207,216,220) !important;
+    font-size: 15px !important;
+  }
+      /*Graphs cards */
+
+  md-card-content p {
+   font-size: 13px;
+  }
+}
+
+
 
 .pagination ul {
   background-color: rgb(207,216,220);
 }
 
+.mdl-data-table{
+	font-size: 12px !important;
+}
 
+.pagination-page.active {
+    background: rgb(224,64,251) !important;
+    border-color: rgb(224,64,251) !important;
+}
 
-/*Dialog syle
-*/
+/*Switch */
 
-.dialogdemoBasicUsage #popupContainer {
-  position: relative; }
+md-switch.md-default-theme .md-bar, md-switch .md-bar {
+	background-color: rgb(207,216,220) !important;
+}
 
-.dialogdemoBasicUsage .footer {
-  width: 100%;
-  text-align: center;
-  margin-left: 20px; }
-
-.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
-  font-size: 0.8em;
-  margin-top: 50px; }
-
-.dialogdemoBasicUsage button {
-  width: 200px; }
-
-.dialogdemoBasicUsage div#status {
-  color: #c60008; }
-
-.dialogdemoBasicUsage .dialog-demo-prerendered md-checkbox {
-  margin-bottom: 0; }
-  
-/* Progress bar */
-
-.progressLineardemoBasicUsage body {
-  padding: 20px; }
-
-.progressLineardemoBasicUsage h4 {
-  margin: 10px 0; }
-
-.progressLineardemoBasicUsage md-progress-linear {
-  padding-top: 10px;
-  margin-bottom: 20px; }
-
-.progressLineardemoBasicUsage #loaders > md-switch {
-  margin: 0;
-  margin-left: 10px;
-  margin-top: -10px; }
-
-.progressLineardemoBasicUsage #loaders > h5 {
-  margin-top: 0; }
-
-.progressLineardemoBasicUsage #loaders > p {
-  margin-right: 20px;
-  margin-bottom: 24px; }
-
-.progressLineardemoBasicUsage p.small {
-  font-size: 0.8em;
-  margin-top: -18px; }
-
-.progressLineardemoBasicUsage hr {
-  width: 100%;
-  margin-top: 20px;
-  border-color: rgba(221, 221, 177, 0.1); }
-
-.progressLineardemoBasicUsage p.small > code {
-  font-size: 0.8em; }
-
-.progressLineardemoBasicUsage .visible {
-  opacity: 0;
-  border: 2px solid white !important; }
-
-.progressLineardemoBasicUsage .container {
-  display: block;
-  position: relative;
-  width: 100%;
-  border: 2px solid #aad1f9;
-  transition: opacity  0.1s linear;
-  border-top: 0px; }
-
-.progressLineardemoBasicUsage .bottom-block {
-  display: block;
-  position: relative;
-  background-color: rgba(255, 235, 169, 0.25);
-  height: 85px;
-  width: 100%; }
-
-.progressLineardemoBasicUsage .bottom-block > span {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 25px;
-  font-size: 0.9em; }
 
   
