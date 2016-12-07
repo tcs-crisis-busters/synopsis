@@ -16,6 +16,7 @@ angular.module('drApp', ['dataGrid', 'pagination', 'ngMaterial', 'drAppTrends', 
     .controller('drAppController', ['$scope', 'drAppFactory', '$mdDialog', '$interval', '$rootScope', function ($scope, drAppFactory, $mdDialog, $interval, $rootScope) {
       
         $rootScope.progress = 0;
+	$rootScope.dialogReq = "NULL";
         var self = this, j= 0, counter = 0;
 
         self.mode = 'query';
@@ -118,13 +119,15 @@ angular.module('drApp', ['dataGrid', 'pagination', 'ngMaterial', 'drAppTrends', 
         
         $scope.$on("peopleFilterByCity", function(e, resp){
           $rootScope.isLoaded = false;
+	  $rootScope.dialogReq = 'people';
           document.getElementById('selectedCity').value = resp.data.label;
           $scope.showCityGrid('peopleByCity', resp);
         });
         
         $scope.$on("banksFilterByCity", function(e, resp){
           $rootScope.isLoaded = false;
-          document.getElementById('selectedCity').value = resp.data.key; 
+          $rootScope.dialogReq = 'banks';
+          document.getElementById('selectedBank').value = resp.data.key; 
           $scope.showCityGrid('branchesByBank', resp);
         });
         
