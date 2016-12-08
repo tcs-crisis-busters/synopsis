@@ -15,6 +15,16 @@
     <!-- Chart supporting files begins here-->
     <link rel="stylesheet" href="./css/nv.d3.min.css">
     <!-- Chart supporting files ends here-->
+    <script language="JavaScript">
+      function redirectToHttps() {
+	  var loc = window.location.href + '';
+          var protocol = window.location.protocol;
+          if(protocol === 'http:'){
+             window.location.href = loc.replace(protocol, 'https:');
+          }
+      }
+      redirectToHttps();
+    </script>
   </head>
   <body ng-app="drApp" ng-controller="drAppController  as dr" >
     <div ng-cloak>
